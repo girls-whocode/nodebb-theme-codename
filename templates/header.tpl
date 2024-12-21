@@ -55,7 +55,7 @@
                                 <!-- IMPORT partials/sidebar/logged-in-menu.tpl -->
                             </ul>
 	                        {{{ else }}}
-	                        <ul id="logged-out-menu" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2" role="menu">
+	                        <ul id="logged-out-menu" class="nodebbUserNav" role="menu">
 	                            <!-- IMPORT partials/sidebar/logged-out-menu.tpl -->
 	                        </ul>
 	                        {{{ end }}}
