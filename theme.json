@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-quickstart",
+    "id": "nodebb-theme-codename",
     "name": "My Theme Name",
     "description": "Enter a description here",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart",
+    "url": "https://github.com/girls-whocode/nodebb-theme-codename",
     "baseTheme": "nodebb-theme-harmony"
 }
