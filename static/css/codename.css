@@ -1166,3 +1166,34 @@ select [value="Roboto black"] {
    color: var(--clr-jwseCardText);
    margin: 8px 8px;
 }
+
+ol,
+ul {
+    padding-left: 0rem !important;
+}
+
+img {
+    display: block;
+    width: 100%; /* or a fixed width */
+    height: auto; /* or a fixed height */
+    object-fit: cover; /* Ensures images scale nicely */
+    opacity: 1; /* Default to visible */
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px !important;
+}
+
+img[data-loaded="false"] {
+    opacity: 0; /* Hide only if explicitly marked as not loaded */
+}
+
+p {
+    color: #cccccc;
+}
+
+.text-xs {
+    color: #999999 !important;
+}
+
+.ff-secondary {
+    color: #ffffff !important;
+}

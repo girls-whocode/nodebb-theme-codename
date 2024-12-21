@@ -4,12 +4,11 @@
 	<title>{browserTitle}</title>
 	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
     <link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}{{{ if (languageDirection=="rtl") }}}-rtl{{{ end }}}.css?{config.cache-buster}" />
-    {{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/root.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/components.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/global.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/framework.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/codename.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/codename.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/utilities.css" />
 
     <script data-id="color-scheme-script">
@@ -22,8 +21,6 @@
 		var app = {
 			user: JSON.parse('{{userJSON}}')
 		};
-
-		document.documentElement.style.setProperty('--panel-offset', `${localStorage.getItem('panelOffset') || 0}px`);
 	</script>
 
 	{{{if useCustomHTML}}}
@@ -32,39 +29,11 @@
 	{{{if useCustomCSS}}}
 	    <style>{{customCSS}}</style>
 	{{{end}}}
-
-    <style>
-        img {
-            display: block;
-            width: 100%; /* or a fixed width */
-            height: auto; /* or a fixed height */
-            object-fit: cover; /* Ensures images scale nicely */
-            opacity: 1; /* Default to visible */
-            transition: opacity 0.3s ease-in-out;
-            border-radius: 5px !important;
-        }
-
-        img[data-loaded="false"] {
-            opacity: 0; /* Hide only if explicitly marked as not loaded */
-        }
-
-        p {
-            color: #cccccc;
-        }
-
-        .text-xs {
-            color: #999999 !important;
-        }
-
-        .ff-secondary {
-            color: #ffffff !important;
-        }
-    </style>
 </head>
 
 <body class="nodebbApp nodebbApp_front nodebbApp_noTouch {bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
     <a class="visually-hidden-focusable position-absolute top-0 start-0 p-3 m-3 bg-body" style="z-index: 1021;" href="#content">[[global:skip-to-content]]</a>
-    <div id="content">
+    <div id="app">
         <header data-nodebb-hook="header" class="nodebbHeader nodebbResponsive_header--desktop">
             <div hidden="hidden" class="nodebbHeader__top">
                 <div class="nodebbWidth nodebbHeader__align">
@@ -76,24 +45,30 @@
             <div data-nodebb-hook="primaryHeader" class="nodebbHeader__primary container-fluid">
                 <div class="nodebbWidth nodebbHeader__align">
                     <!-- IMPORT partials/header/brand.tpl -->
+                    <script>
+                        const headerEl = document.getElementById('header-menu');
+                        if (headerEl) {
+                            const rect = headerEl.getBoundingClientRect();
+                            const offset = Math.max(0, rect.bottom);
+                            document.documentElement.style.setProperty('--panel-offset', offset + `px`);
+                        } else {
+                            document.documentElement.style.setProperty('--panel-offset', `0px`);
+                        }
+                    </script>
                     <div data-nodebb-header-position="5" class="nodebbHeader__center">
                         <!-- IMPORT partials/menu.tpl -->
                     </div>
                     <div data-nodebb-header-position="6" class="nodebbHeader__end">
                         <div data-nodebb-header-content="user" id="elUserNav">
-                            <ul id="elUserNav" class="nodebbUserNav">
-                                <li data-el="profile">
-                                    <a href="https://discussions.codenamejessica.com/user/jessica" rel="nofollow" class="nodebbUserPhoto nodebbUserPhoto--fluid nodebbUserNav__link" title="Go to jessica's profile">
-                                        <img src="/assets/uploads/profile/uid-1/1-profileavatar-1734441477713.jpeg" alt="jessica" class="nodebbUserNav__avatar">
-                                    </a>
-                                </li>
-                                <li data-el="logout">
-                                    <button class="nodebbUserNav__link" id="logoutButton">
-                                        <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
-                                        <span class="nodebbUserNav__text">Log Out</span>
-                                    </button>
-                                </li>
+                            {{{ if config.loggedIn }}}
+                            <ul id="logged-in-menu" class="nodebbUserNav">
+                                <!-- IMPORT partials/sidebar/logged-in-menu.tpl -->
                             </ul>
+	                        {{{ else }}}
+	                        <ul id="logged-out-menu" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2" role="menu">
+	                            <!-- IMPORT partials/sidebar/logged-out-menu.tpl -->
+	                        </ul>
+	                        {{{ end }}}
                         </div>
                     </div>
                 </div>
@@ -128,4 +103,4 @@
                 </div>
             </div>
         </header>
-        <main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
+        <main id="content" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
