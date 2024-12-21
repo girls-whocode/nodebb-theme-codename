@@ -30,6 +30,7 @@
 												</div>
 											</div>
 										</section>
+										<!-- IMPORT partials/latest.tpl -->
 									</section>
 								</section>
                                 <aside id="nodebbLayout_sidebar" class="nodebbLayout__secondary-column" data-controller="core.front.widgets.sidebar" group-data="">

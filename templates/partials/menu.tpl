@@ -2,11 +2,8 @@
                                 <ul id="main-nav" class="nodebbNavBar">
                                     {{{each navigation}}}
                                     
-                                    <li {{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
-                                        <a class="nav-link navigation-link" data-navigational="true" href="{navigation.route}" 
-                                            {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}
-                                            {{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}
-                                        >
+                                    <li title="{navigation.title}">
+                                        <a class="nav-link navigation-link" data-navigational="true" href="{navigation.route}" {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}} {{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
                                             {{{ if navigation.iconClass }}}
                                             <i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
                                             {{{ end }}}

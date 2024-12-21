@@ -45,16 +45,6 @@
             <div data-nodebb-hook="primaryHeader" class="nodebbHeader__primary container-fluid">
                 <div class="nodebbWidth nodebbHeader__align">
                     <!-- IMPORT partials/header/brand.tpl -->
-                    <script>
-                        const headerEl = document.getElementById('header-menu');
-                        if (headerEl) {
-                            const rect = headerEl.getBoundingClientRect();
-                            const offset = Math.max(0, rect.bottom);
-                            document.documentElement.style.setProperty('--panel-offset', offset + `px`);
-                        } else {
-                            document.documentElement.style.setProperty('--panel-offset', `0px`);
-                        }
-                    </script>
                     <div data-nodebb-header-position="5" class="nodebbHeader__center">
                         <!-- IMPORT partials/menu.tpl -->
                     </div>
