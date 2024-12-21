@@ -1,7 +1,7 @@
 {
     "name": "nodebb-theme-codename",
     "version": "0.1.0",
-    "description": "Enter a description here",
+    "description": "A dark style theme based off CodeNameJessica website",
     "main": "lib/theme.js",
     "keywords": [],
     "license": "MIT",

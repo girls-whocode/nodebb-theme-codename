@@ -1,0 +1,256 @@
+@media (max-width:767px) {
+    :root {
+        --i-box--pa-bl: var(--i-sp_2);
+        --i-box--pa-in: var(--i-sp_2);
+        --i-sticky-offset: calc(var(--i-sticky-offset--small) + var(--i-sticky-offset--extra, 0px));
+    }
+}
+
+@supports not (color:oklch(from color-mix(in srgb, red, blue) clamp(0, (.80 - l) * 1000, 1) c h)) {
+    @property --i-background_2 {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-background_3 {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-background_4 {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-background_5 {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-primary-dark {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-primary-light {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-secondary-dark {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-secondary-light {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-color_primary {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-color_secondary {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+
+    @property --i-body--ba-co {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: black;
+    }
+}
+
+@property --i-co {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: black;
+}
+
+@supports (not (color:oklch(from red l c h))) or (not (color:oklch(from var(--i-primary) clamp(0, (.80 - l) * 1000, 1) c h))) {
+    :root {
+        --i-color_contrast: initial;
+        --i-primary-contrast: hsl(0 0% min(100%, ((70 - var(--i-primary-relative-l)) * 100%)));
+        --i-secondary-contrast: hsl(0 0% min(100%, ((70 - var(--i-secondary-relative-l)) * 100%)));
+    }
+
+    [data-nodebb-scheme="light"] {
+        --i-color_primary: color-mix(in hsl, var(--i-primary) 0%, hsl(none none min(60%, var(--i-primary-relative-l) * 1%)));
+        --i-color_secondary: color-mix(in hsl, var(--i-secondary) 0%, hsl(none none min(60%, var(--i-secondary-relative-l) * 1%)));
+    }
+
+    [data-nodebb-scheme="dark"] {
+        --i-color_primary: color-mix(in hsl, var(--i-primary) 0%, hsl(none none max(70%, var(--i-primary-relative-l) * 1%)));
+        --i-color_secondary: color-mix(in hsl, var(--i-secondary) 0%, hsl(none none max(70%, var(--i-secondary-relative-l) * 1%)));
+    }
+}
+
+@supports not (color:color-mix(in srgb, red, red)) {
+    :root {
+        --i-primary-light: var(--i-primary);
+        --i-primary-dark: var(--i-primary);
+        --i-secondary-light: var(--i-secondary);
+        --i-secondary-dark: var(--i-secondary);
+        --i-background_1: var(--i-base_1);
+        --i-background_2: var(--i-base_2);
+        --i-background_3: var(--i-base_3);
+        --i-background_4: var(--i-base_4);
+        --i-background_5: var(--i-base_5);
+        --i-background_6: var(--i-base_6);
+        --i-color_primary: var(--i-primary);
+        --i-color_secondary: var(--i-secondary);
+    }
+}
+
+@supports not (color:oklch(50% 50% 50)) {
+    :root {
+        --i-tooltip--ba-co: hsl(0, 0%, 20%);
+    }
+
+    [data-nodebb-scheme="light"] {
+        --i-base_1: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(80% + 20% * var(--i-base-l)));
+        --i-base_2: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(77% + 21% * var(--i-base-l)));
+        --i-base_3: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(77% + 21% * var(--i-base-l)));
+        --i-base_4: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(68% + 21% * var(--i-base-l)));
+        --i-base_5: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(65% + 22% * var(--i-base-l)));
+        --i-base_6: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(60% + 23% * var(--i-base-l)));
+        --i-base-contrast_1: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(37% + 10% * var(--i-base-l)));
+        --i-base-contrast_2: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(30% + 9% * var(--i-base-l)));
+        --i-base-contrast_3: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(24% + 9% * var(--i-base-l)));
+        --i-base-contrast_4: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(18% + 5% * var(--i-base-l)));
+        --i-base-contrast_5: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(11% + 4% * var(--i-base-l)));
+        --i-base-contrast_6: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), 5%);
+    }
+
+    [data-nodebb-scheme="dark"] {
+        --i-base_1: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(5% + 15% * var(--i-base-l)));
+        --i-base_2: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(9% + 18% * var(--i-base-l)));
+        --i-base_3: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(12% + 21% * var(--i-base-l)));
+        --i-base_4: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(16% + 24% * var(--i-base-l)));
+        --i-base_5: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(20% + 27% * var(--i-base-l)));
+        --i-base_6: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(25% + 30% * var(--i-base-l)));
+        --i-base-contrast_1: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(50% + 20% * var(--i-base-l)));
+        --i-base-contrast_2: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(60% + 15% * var(--i-base-l)));
+        --i-base-contrast_3: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(70% + 10% * var(--i-base-l)));
+        --i-base-contrast_4: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(80% + 5% * var(--i-base-l)));
+        --i-base-contrast_5: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), calc(90% + 3% * var(--i-base-l)));
+        --i-base-contrast_6: hsl(0 0% 100%);
+    }
+}
+
+@supports not (color:hsl(0 0% 0%)) {
+    :root {
+        --i-primary-contrast: #fff;
+        --i-secondary-contrast: #fff;
+    }
+
+    [data-nodebb-scheme="light"] {
+        --i-primary: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), 10%);
+        --i-secondary: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), 20%);
+    }
+
+    [data-nodebb-scheme="dark"] {
+        --i-primary: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), 40%);
+        --i-secondary: hsl(calc(var(--i-base-h) - 40), calc(var(--i-base-c) * 100%), 30%);
+    }
+}
+
+@container style(--set__i-design-shadow:0) {
+    body {
+        --i-box--bo-sh: none;
+    }
+}
+
+@font-face {
+    font-family: "Bitter";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_Bitter.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Instrument Sans";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_InstrumentSans.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_Inter.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_Manrope.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Merriweather Sans";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_MerriweatherSans.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_OpenSans.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Pathway Extreme";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_PathwayExtreme.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Roboto Flex";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_RobotoFlex.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Roboto Serif";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_RobotoSerif.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_RobotoSlab.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url('../resources/core_6e2264fd945b7cfcd324d727be0a94ed_SourceSans3.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+:root {
+    --i-co: var(--i-color_root);
+}

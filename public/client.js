@@ -15,5 +15,11 @@
 */
 
 $(document).ready(function () {
-	// Your code goes here
+	require(['hooks'], function (hooks) {
+		hooks.on('action:ajaxify.contentLoaded', function () {
+			$('[data-toggle="tooltip"]').tooltip({
+				container: 'body',
+			});
+		});
+	});
 });

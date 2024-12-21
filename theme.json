@@ -1,7 +1,7 @@
 {
     "id": "nodebb-theme-codename",
-    "name": "My Theme Name",
-    "description": "Enter a description here",
+    "name": "CodeNameJessica",
+    "description": "A dark style theme based off CodeNameJessica website",
     "url": "https://github.com/girls-whocode/nodebb-theme-codename",
     "baseTheme": "nodebb-theme-harmony"
 }
