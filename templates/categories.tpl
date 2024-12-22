@@ -8,7 +8,7 @@
                         <div class="nodebbContentWrap">
                             <div class="nodebbLayout__columns">
                                 <section class="nodebbLayout__primary-column">
-                                    <section class="cWidgetContainer cWidgetContainer--main" data-role="widgetReceiver" style="">
+                                    <section class="cWidgetContainer cWidgetContainer--main" data-role="widgetReceiver">
 										<section data-role="widgetReceiver" data-orientation="horizontal" data-widgetarea="header" data-widget-layout="table" data-widget-area-id="1" data-widget-full-width-items="" data-widget-show-images="1" data-widget-orientation="horizontal" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--isWidget" group-data="">
 											<div class="nodebbWidget__content--wrap">
 												<div data-blocktitle="Custom Blocks" data-blockid="app_cms_Blocks_4510589" data-blockerrormessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page." data-menustyle="menu" data-blockconfig="1" data-controller="core.front.widgets.block" class="nodebbWidget nodebbWidget--horizontal">
@@ -36,8 +36,8 @@
                                 <aside id="nodebbLayout_sidebar" class="nodebbLayout__secondary-column" data-controller="core.front.widgets.sidebar" group-data="">
                                     <div class="nodebbLayout__secondary-sticky-outer">
                                         <div class="nodebbLayout__secondary-sticky-inner" data-nodebb-hook="sidebar">
-                                            <section data-role="widgetReceiver" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="wrap" data-widget-area-id="0" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--main">
-                                                <!-- IMPORT partials/sidebar.tpl -->
+                                            <section id="sidebar" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="wrap" data-widget-area-id="0" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--main">
+                                                <!-- IMPORT partials/sidebar/sidebar.tpl -->
                                             </section>
                                         </div>
                                     </div>

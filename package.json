@@ -2,7 +2,7 @@
     "name": "nodebb-theme-codename",
     "version": "0.1.0",
     "description": "A dark style theme based off CodeNameJessica website",
-    "main": "lib/theme.js",
+    "main": "lib/library.js",
     "keywords": [],
     "license": "MIT",
     "husky": {

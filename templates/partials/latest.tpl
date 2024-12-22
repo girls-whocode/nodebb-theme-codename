@@ -3,18 +3,17 @@
         <h3>Latest Topics</h3>
     </header>
     <div class="nodebbWidget__content">
-        <ul class="nodebbData nodebbData--mini-grid nodebbData--carousel nodebbData--topic-feed-widget" 
-            id="widget-topic-feed_65456218" 
-            tabindex="0">
+        <ul class="nodebbData nodebbData--mini-grid nodebbData--carousel nodebbData--topic-feed-widget" id="widget-topic-feed_65456218" tabindex="0">
             {{{ each topicsList }}}
             <li class="nodebbData__item">
                 <!-- Topic Title -->
                 <a href="/topic/{slug}" class="nodebbLinkPanel">
-                    <span>{{topicsList}}</span>
+                    <span>{title}</span>
                 </a>
                 
                 <!-- User Avatar or Fallback -->
                 <figure class="nodebbData__icon">
+
                     {{{ if user.picture }}}
                     <a href="/user/{user.username}" class="nodebbUserPhoto nodebbUserPhoto--fluid">
                         <img src="{user.picture}" alt="{user.username}" loading="lazy" />
