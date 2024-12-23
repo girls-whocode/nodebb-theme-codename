@@ -64,13 +64,15 @@
                 </div>
             </div>
             <div data-nodebb-hook="secondaryHeader" class="nodebbHeader__secondary">
-                <div class="nodebbWidth nodebbHeader__align"><div data-nodebb-header-position="7" class="nodebbHeader__start">
-                    <div data-nodebb-header-content="breadcrumb">
-                        <nav aria-label="Breadcrumbs" class="nodebbBreadcrumb nodebbBreadcrumb--top">
-                            <ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
-                                <!-- IMPORT partials/breadcrumb.tpl -->
-                            </ol>
-                        </nav>
+                <div class="nodebbWidth nodebbHeader__align">
+                    <div data-nodebb-header-position="7" class="nodebbHeader__start">
+                        <div data-nodebb-header-content="breadcrumb">
+                            <nav aria-label="Breadcrumbs" class="nodebbBreadcrumb nodebbBreadcrumb--top">
+                                <ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+                                    <!-- IMPORT partials/breadcrumb.tpl -->
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
                 <div data-nodebb-header-position="8" class="nodebbHeader__center"></div>
