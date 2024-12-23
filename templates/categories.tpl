@@ -33,12 +33,12 @@
 										<!-- IMPORT partials/latest.tpl -->
 									</section>
 								</section>
-                                <aside id="nodebbLayout_sidebar" class="nodebbLayout__secondary-column" data-controller="core.front.widgets.sidebar" group-data="">
+                                <aside id="nodebbLayout_sidebar" data-widget-area="sidebar" class="nodebbLayout__secondary-column" data-controller="core.front.widgets.sidebar" group-data="">
                                     <div class="nodebbLayout__secondary-sticky-outer">
                                         <div class="nodebbLayout__secondary-sticky-inner" data-nodebb-hook="sidebar">
-                                            <section id="sidebar" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="wrap" data-widget-area-id="0" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--main">
-                                                <!-- IMPORT partials/sidebar/sidebar.tpl -->
-                                            </section>
+											<section id="sidebar" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="wrap" data-widget-area-id="0" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--main">
+												<!-- IMPORT partials/sidebar/sidebar.tpl -->
+											</section>
                                         </div>
                                     </div>
                                 </aside>
