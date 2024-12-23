@@ -30,23 +30,22 @@
 												</div>
 											</div>
 										</section>
-										<!-- IMPORT partials/latest.tpl -->
+										<!-- IMPORT partials/recent.tpl -->
 									</section>
 								</section>
+								<!-- An if statement needs to go here if sidebar is active -->
                                 <aside id="nodebbLayout_sidebar" data-widget-area="sidebar" class="nodebbLayout__secondary-column" data-controller="core.front.widgets.sidebar" group-data="">
                                     <div class="nodebbLayout__secondary-sticky-outer">
                                         <div class="nodebbLayout__secondary-sticky-inner" data-nodebb-hook="sidebar">
 											<section id="sidebar" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="wrap" data-widget-area-id="0" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--main">
-												<!-- IMPORT partials/sidebar/sidebar.tpl -->
+												<section id="top_posters" data-role="widgetReceiver" data-orientation="vertical" data-widgetarea="sidebar" data-widget-layout="featured" data-widget-area-id="4" data-widget-full-width-items="" data-widget-show-images="1" data-widget-orientation="vertical" data-restrict-nesting="1" class="cWidgetContainer cWidgetContainer--isWidget" style="--i-widget--gap: 0px; --i-widget--size: 100%; --i-widget--padding-block: 0; --i-widget--padding-inline: 0;">
+													<!-- IMPORT widgets/topposters.tpl -->
+												</section>
 											</section>
                                         </div>
                                     </div>
                                 </aside>
+								<!-- end the sidebar if statement -->
 							</div>
 						</div>
-					</div>
-					<div data-widget-area="footer">
-						{{{ each widgets.footer }}}
-							{{widgets.footer.html}}
-						{{{ end }}}
 					</div>

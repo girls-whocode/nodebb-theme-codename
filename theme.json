@@ -2,6 +2,5 @@
     "id": "nodebb-theme-codename",
     "name": "CodeNameJessica",
     "description": "A dark style theme based off CodeNameJessica website",
-    "url": "https://github.com/girls-whocode/nodebb-theme-codename",
-    "baseTheme": "nodebb-theme-harmony"
+    "url": "https://github.com/girls-whocode/nodebb-theme-codename"
 }

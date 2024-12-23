@@ -1,4 +1,7 @@
 
+					{{{ each widgets.footer }}}
+						{{widgets.footer.html}}
+					{{{ end }}}
                 </div><!-- /.container#content -->
             </main>
         </div>
