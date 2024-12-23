@@ -4,12 +4,12 @@
 	<title>{browserTitle}</title>
 	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
     <link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}{{{ if (languageDirection=="rtl") }}}-rtl{{{ end }}}.css?{config.cache-buster}" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/root.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/components.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/global.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/framework.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/codename.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/plugins/nodebb-theme-codename/static/css/utilities.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/root.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/components.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/codename.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/plugins/nodebb-theme-codename/static/css/utilities.css" />
 
     <script data-id="color-scheme-script">
         (() => document.documentElement.setAttribute('data-nodebb-scheme', 
