@@ -14,7 +14,5 @@
 		</div>
 	</div>
 	{{{ end }}}
-
-	<!-- IMPORT partials/footer/js.tpl -->
 </body>
 </html>
